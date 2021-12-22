@@ -1,0 +1,126 @@
+.FoodList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.FoodItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    /* width: 100%; */
+}
+.FoodItem-img{
+    overflow: hidden;
+    position: relative;
+}
+.FoodItem-img a::after{
+    content: "\e003";
+    font-family: 'Glyphicons Halflings';
+    opacity: 0;
+    background-color: rgba(231, 91, 30, 0.75);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -26px;
+    bottom: -26px;
+    text-align: center;
+    line-height: 900%;
+    font-size: 30px;
+    color: #fff;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.FoodItem-img a:hover::after{
+    opacity: 1;
+} 
+.FoodItem-img a img{
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 260px;
+}
+.FoodItem-name{
+    color: black;
+    font-family: 'nautilus_pompiliusregular';
+    font-size: 24px;
+    text-align: center;
+}
+.FoodItem-price{
+    margin-top: -10px;
+    text-align: center;
+}
+.FoodItem-btn{
+    background-color: #e75b1e;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 2px 16px;
+    max-width: 300px;
+}
+.FoodItem-btn:hover{
+    background-color: white;
+    padding: 0 14px;
+    border: 2px solid #ee4d2d;
+    color: black;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.FoodFilter-title{
+    /* border-bottom: 1px solid rgba(36, 42, 53, 0.2); */
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: rgb(36, 42, 53);
+    /* padding-bottom: 5px; */
+    text-align: center;
+    padding: 15px;
+}
+.FoodFilter-search{
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(36, 42, 53, 0.2);
+}
+.FoodFilter-search input{
+    width: 100%;
+    cursor: unset;
+}
+.FoodFilter-collection-btn{
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 0;
+}
+.FoodFilter-collection-btn div{
+    font-weight: 400;
+    color: black;
+}
+.FoodFilter-collection-list{
+    margin-top: 10px;
+    transition: all 200ms cubic-bezier(0.39,0.11,0.37,0.99) 0ms;
+    overflow: hidden;
+}
+.displaynone{
+    display: none;
+}
+[data-filter]{
+    cursor: pointer;
+}
+.CI-active{
+    color:#e75b1e;
+}
+.FoodList-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
